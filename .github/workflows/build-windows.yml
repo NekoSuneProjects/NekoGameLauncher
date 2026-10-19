@@ -101,6 +101,7 @@ jobs:
       - name: Upload app artifact
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: NekoGameLauncher-Windows-Gaming-Node-${{ matrix.runtime }}
           path: artifacts/NekoGameLauncher-Windows-Gaming-Node-${{ steps.version.outputs.version }}-${{ matrix.runtime }}.zip
           if-no-files-found: error
